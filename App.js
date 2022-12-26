@@ -43,7 +43,7 @@ export default function App() {
   const [memoryValue, setMemoryValue] = useState(0);
   const [operatorValue, setOperatorValue] = useState("0");
 
-  const buttonPressed = (val: string) => {
+  const buttonPressed = (val) => {
     if (val === "AC") {
       clear();
     }
@@ -83,7 +83,7 @@ export default function App() {
     }
   };
 
-  const handleNumber = (val: string): string => {
+  const handleNumber = (val) => {
     if (readyToReplace) {
       setReadyToReplace(false);
       return val;
@@ -125,7 +125,7 @@ export default function App() {
 
   
 
-  const getButtonRows = (nthRow: number) => {
+  const getButtonRows = (nthRow) => {
     const buttonRow = buttonTextAndColor[nthRow];
     const buttons = buttonRow.map((b) => {
       return (

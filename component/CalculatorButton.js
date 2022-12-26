@@ -3,13 +3,8 @@ import { TouchableOpacity, Text, StyleSheet, Dimensions } from "react-native";
 
 const windowSize = Dimensions.get("window");
 const buttonSize = windowSize.width * 0.24;
-interface Prop {
-  backgroundColor: {};
-  textColor: {};
-  text: string;
-  buttonPressed: (val: string) => void;
-}
-function CalculatorButton(props: Prop) {
+
+function CalculatorButton(props) {
   return (
     <TouchableOpacity
       style={[props.backgroundColor, styles.calculatorButton]}
